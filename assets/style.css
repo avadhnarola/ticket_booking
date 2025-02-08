@@ -75,10 +75,13 @@ button {
     font-weight: bold;
     margin-top: 5px;
 }
-
-/* Sidebar Styles */
+.logo{
+    height: 30px;
+    transform: scale(250%);
+    margin-bottom: 10px;
+}
 .navbar {
-    background-color: #ff4757;
+    background-color: #f84464;
 }
 .sidebar {
     height: 100%;
@@ -114,4 +117,8 @@ button {
     border: none;
     background: none;
     cursor: pointer;
+}
+
+img{
+    border-radius: 10px;
 }
