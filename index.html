@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Online Movie Ticket Booking</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg px-3">
+        <a class="navbar-brand" href="#">🎬 MovieTickets</a>
+        
+        <!-- Search Bar -->
+        <form class="d-flex ms-auto me-3">
+            <input class="form-control me-2" type="search" placeholder="Search movies..." aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" onclick="openMenu()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Sidebar Menu -->
+        <div id="sidebarMenu" class="sidebar">
+            <button class="close-btn" onclick="closeMenu()">&times;</button>
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Bookings</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="slider">
+            <div class="slide" id="slide1">
+                <img src="movie-banner1.jpg" alt="Movie Banner 1">
+            </div>
+            <div class="slide" id="slide2">
+                <img src="movie-banner2.jpg" alt="Movie Banner 2">
+            </div>
+            <div class="slide" id="slide3">
+                <img src="movie-banner3.jpg" alt="Movie Banner 3">
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
+    </header>
+
+    <main>
+        <h1>Movies Now Showing</h1>
+        <div class="container mt-5">
+            <h2>Recommended Movies</h2>
+            <div class="row main-display">
+                <div class="col-md-2">
+                    <div class="movie-card text-center">
+                        <img src="assets/images/Vidaamuyarchi.avif" alt="Vidamuyarchi">
+                        <p class="rating">⭐ 7.9/10 | 25.9K Votes</p>
+                        <p class="movie-title">Vidamuyarchi</p>
+                        <p>Action/Mystery/Thriller</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <a href="">
+                        <div class="movie-card text-center">
+                            <img src="assets/images/Loveyapa.avif" alt="Loveyapa">
+                            <p class="rating">⭐ 8.2/10 | 423 Votes</p>
+                            <p class="movie-title">Loveyapa</p>
+                            <p>Comedy/Drama/Romantic</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <div class="movie-card text-center">
+                        <img src="assets/images/Badass Ravi Kumar.avif" alt="Badass Ravi Kumar">
+                        <p class="rating">⭐ 7.4/10 | 574 Votes</p>
+                        <p class="movie-title">Badass Ravi Kumar</p>
+                        <p>Action/Drama</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="movie-card text-center">
+                        <img src="assets/images/Deva.avif" alt="Deva">
+                        <p class="rating">⭐ 7.5/10 | 13.4K Votes</p>
+                        <p class="movie-title">Deva</p>
+                        <p>Action/Thriller</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="movie-card text-center">
+                        <img src="assets/images/umbarro.jpg" alt="Umbarro">
+                        <p class="rating">⭐ 9.1/10 | 2.6K Votes</p>
+                        <p class="movie-title">Umbarro</p>
+                        <p>Comedy/Drama/Family</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
