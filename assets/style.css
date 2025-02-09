@@ -118,7 +118,43 @@ button {
     background: none;
     cursor: pointer;
 }
-
+.slide img{
+    width: 98%;
+}
+.slide{
+    display: flex;
+    justify-content: center;
+    
+}
 img{
     border-radius: 10px;
+}
+
+.title{
+    text-align: center;
+    margin-top: 15px;
+    animation: zoom 1s infinite alternate ease-in-out;
+}
+
+.heading h2{
+    width: 20ch;
+    text-wrap: nowrap;
+    overflow: hidden;   
+    animation: typing 1.3s infinite steps(50) alternate-reverse;
+
+}
+
+@keyframes typing {
+        from{
+            width: 0ch;
+        }
+}
+
+@keyframes zoom {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.3);
+    }
 }
