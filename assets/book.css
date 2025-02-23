@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.screen {
+    width: 80%;
+    height: 50px;
+    background-color: #ccc;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+.seats-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
+.seat {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border: 2px solid #666;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.seat.selected {
+    background-color: rgba(0, 128, 0, 0.863);
+    border: 2px solid black;
+    color: white;
+}
+.payment-form {
+    margin-top: 20px;
+}
+.payment-form input, .payment-form button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+}
+h1 h2{
+    text-align: center;
+}
+.pay-div{
+    display: flex;
+    justify-content: center;
+}
+.payment{
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    transition: all ease 0.3s;
+    margin-top: 10px;
+}
+.payment:hover{
+    color: red;
+    background-color: orange;
+}
