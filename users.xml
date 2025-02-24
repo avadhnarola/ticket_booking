@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movieBookings>
+    <booking>
+        <userID>1</userID>
+        <name>John Doe</name>
+        <email>johndoe@example.com</email>
+        <movie>Avengers: Endgame</movie>
+        <date>2025-03-10</date>
+        <time>19:30</time>
+        <seats>
+            <seat>A12</seat>
+            <seat>A13</seat>
+        </seats>
+        <paymentStatus>Paid</paymentStatus>
+    </booking>
+
+    <booking>
+        <userID>2</userID>
+        <name>Jane Smith</name>
+        <email>janesmith@example.com</email>
+        <movie>Oppenheimer</movie>
+        <date>2025-03-12</date>
+        <time>21:00</time>
+        <seats>
+            <seat>C5</seat>
+            <seat>C6</seat>
+        </seats>
+        <paymentStatus>Pending</paymentStatus>
+    </booking>
+</movieBookings>

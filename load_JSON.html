@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Bookings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .booking-container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .booking:last-child {
+            border-bottom: none;
+        }
+
+        .paid {
+            color: green;
+            font-weight: bold;
+        }
+
+        .pending {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Movie Ticket Bookings</h2>
+    <div class="booking-container" id="booking-list">
+        Loading...
+    </div>
+
+    <script>
+        fetch('booking.json')
+            .then(response => response.json())
+            .then(data => {
+                const bookingList = document.getElementById("booking-list");
+                bookingList.innerHTML = "";
+
+                data.bookings.forEach(booking => {
+                    const bookingDiv = document.createElement("div");
+                    bookingDiv.classList.add("booking");
+
+                    bookingDiv.innerHTML = `
+                        <h3>${booking.movie}</h3>
+                        <p><strong>Name:</strong> ${booking.name}</p>
+                        <p><strong>Email:</strong> ${booking.email}</p>
+                        <p><strong>Date:</strong> ${booking.date} | <strong>Time:</strong> ${booking.time}</p>
+                        <p><strong>Seats:</strong> ${booking.seats.join(", ")}</p>
+                        <p><strong>Payment Status:</strong> <span class="${booking.paymentStatus === 'Paid' ? 'paid' : 'pending'}">
+                            ${booking.paymentStatus}</span></p>
+                    `;
+
+                    bookingList.appendChild(bookingDiv);
+                });
+            })
+            .catch(error => {
+                console.error("Error loading JSON:", error);
+                document.getElementById("booking-list").innerHTML = "Failed to load bookings.";
+            });
+    </script>
+
+</body>
+
+</html>

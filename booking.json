@@ -1,0 +1,45 @@
+{
+    "bookings": [
+      {
+        "userID": 101,
+        "name": "Alice Johnson",
+        "email": "alice@example.com",
+        "movie": "Dune: Part Two",
+        "date": "2025-04-05",
+        "time": "18:00",
+        "seats": ["B10", "B11", "B12"],
+        "paymentStatus": "Paid"
+      },
+      {
+        "userID": 102,
+        "name": "Michael Brown",
+        "email": "michael@example.com",
+        "movie": "The Batman 2",
+        "date": "2025-04-08",
+        "time": "20:15",
+        "seats": ["D7", "D8"],
+        "paymentStatus": "Pending"
+      },
+      {
+        "userID": 103,
+        "name": "Sophia Martinez",
+        "email": "sophia@example.com",
+        "movie": "Inside Out 2",
+        "date": "2025-04-12",
+        "time": "16:30",
+        "seats": ["F3", "F4", "F5"],
+        "paymentStatus": "Paid"
+      },
+      {
+        "userID": 104,
+        "name": "Daniel Lee",
+        "email": "daniel@example.com",
+        "movie": "Spider-Man: Beyond the Spider-Verse",
+        "date": "2025-04-15",
+        "time": "21:00",
+        "seats": ["G1", "G2"],
+        "paymentStatus": "Pending"
+      }
+    ]
+  }
+  
